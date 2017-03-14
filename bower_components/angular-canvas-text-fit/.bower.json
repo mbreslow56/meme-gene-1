@@ -1,0 +1,39 @@
+{
+  "name": "angular-canvas-text-fit",
+  "main": "angular-canvas-text-fit.js",
+  "authors": [
+    "Nicolas Varchavsky <nicolasv@interatica.com>"
+  ],
+  "description": "Fits a given text in a rectangle on a canvas by reducing font size",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "AngularJS",
+    "canvas",
+    "fit",
+    "text",
+    "wordwrap",
+    "wrapper",
+    "shrink"
+  ],
+  "homepage": "https://github.com/nvarcha/angular-canvas-text-fit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "bca74c12c9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "bca74c12c9267d75697cc808c4dad932a031b189"
+  },
+  "_source": "https://github.com/nvarcha/angular-canvas-text-fit.git",
+  "_target": "*",
+  "_originalSource": "angular-canvas-text-fit",
+  "_direct": true
+}
