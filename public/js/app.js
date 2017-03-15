@@ -1,1 +1,1 @@
-var app = angular.module("memeGene", []);
+var app = angular.module("memeGene", ['angularFileUpload']);

@@ -11,25 +11,30 @@ body {
     background-size: cover;
     position: relative;
     background-repeat: repeat;
-    padding: 5px;
-    margin: 5px;
+    margin: auto;
     }
 .caption {
     position: absolute;
     top: 10px;
     left: 10px;
-    padding: 4px 8px;
+/*    padding: 4px 8px;*/
     color: black;
     margin: 0;
+    margin-right: 5px;
     font: 28px Arial, Sans-Serif;
 	}
+
+.meme-img {
+	position: absolute;
+	margin: auto;
+}
 
 .watermark {
     position: absolute;
     bottom: 10px;
     left: 10px;
     padding: 4px 8px;
-    color: black;
+    color: white;
     margin: 0;
-    font: 14px Arial, Sans-Serif;
+    font: 12px Arial, Sans-Serif;
 	}
