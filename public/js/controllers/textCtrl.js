@@ -1,7 +1,7 @@
 app.controller('textCtrl', function($scope) {
 	$scope.text = "";
-	$scope.size = 28;
-	$scope.fileImage = "";
+	$scope.size = 28
+	$scope.imageFile = "file";
 });
 
 
