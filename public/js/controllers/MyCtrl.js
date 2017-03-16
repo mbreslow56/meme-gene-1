@@ -1,4 +1,7 @@
-app.controller('imgCtrl', ['$scope', 'Upload', '$timeout', function ($scope, Upload, $timeout) {
+//inject ngFileUpload and ngImgCrop directives and services.
+var app = angular.module('fileUpload', ['ngFileUpload', 'ngImgCrop']);
+
+app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', function ($scope, Upload, $timeout) {
     $scope.upload = function (dataUrl, name) {
         Upload.upload({
             url: 'https://angular-file-upload-cors-srv.appspot.com/upload',

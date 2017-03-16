@@ -9,90 +9,99 @@
 </head>
 <body ng-app="memeGene">
 <form>
-<div class="form-group">
-<div ng-controller="imgCtrl" class="generator-field">
-	<div class="row">
-		<div class="col-md-4 col-md-offset-1">
-			<h4 class="lower-header add-text">1. Upload an image</h4>
-			        <button ngf-select ng-model="picFile" accept="image/*">
-            Select Picture</button>
-			<br>
-			<button class="btn btn-success" ng-click="item.upload()" aria-label="Upload" type="submit"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Add Image</button>
+	<div class="form-group">
+		<div ng-controller="imgCtrl" class="generator-field">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<h4 class="lower-header add-text">1. Upload an image</h4>
+						<br>
+					<div class="upload-button">
+						Add an Image
+					
+						<input class="file-upload" type="file" accept="image/*"/>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
 
-<div ng-controller="textCtrl" class="generator-field">
-	<div class="row">
-		<div class="col-md-4 col-md-offset-1">
-			<h4 class="lower-header add-text">2. Add text</h4>
-			<textarea type="text" class="form-control" rows="3" ng-model="text" placeholder="Type your meme text here" ></textarea>
-			<div class="input-group">
-				<input type="number" class="form-control" ng-model="size" placeholder="28" value="28">
-				<div class="input-group-addon">px</div>
-			</div>
-		<div ng-controller="waterMarkCtrl" class="generator-field">
-			<h4 class="lower-header add-text">3. Add watermark</h4>
-			<input type="text" class="form-control" ng-model="mark" placeholder="@handle" >
-			<div class="radio">
-  				<label class="radio-inline">
-    				<input type="radio" name="inlineColorRadioOptions" id="colorRadios1" value="option1" checked>
-    				White
-  				</label>
-  				<label class="radio-inline">
-    				<input type="radio" name="inlineColorRadioOptions" id="colorRadios2" value="option2">
-    				Black
-  				</label>
-			</div>
+		<div ng-controller="textCtrl" class="generator-field">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<h4 class="lower-header add-text">2. Add text</h4>
+					<textarea type="text" class="form-control" rows="3" ng-model="text" placeholder="Type your meme text here" ></textarea>
+						<div class="input-group">
+							<input type="number" class="form-control" ng-model="size" placeholder="28" value="28">
+								<div class="input-group-addon">
+									px
+								</div>
+						</div>
+						<div ng-controller="waterMarkCtrl" class="generator-field">
+							<h4 class="lower-header add-text">3. Add watermark</h4>
+							<input type="text" class="form-control" ng-model="mark" placeholder="@handle" >
+						<div class="radio">
+							<label class="radio-inline">
+								<input type="radio" name="color" id="colorRadios1" value="wm-bk-bl" checked>
+								Black
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="color" id="colorRadios2" value="wm-wt-bl">
+								White
+							</label>
+						</div>
 
-			<div class="white-square">
-				<svg width="700" height="350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
-        		<rect x="0" y="0" height="320" rx="0" ry="0" width="320" fill="white"/>
-        		
+						<div class="white-square">
+							<div id="pic">
+								<img id="image" class="profile-pic" src="http://weknowyourdreams.com/images/white/white-04.jpg" />
+							</div>
+							<svg width="700" height="350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+							
+							<rect x="0" y="0" height="320" rx="0" ry="0" width="320" fill="white"/>
+							</rect>
+							
+							<!-- <img class="meme-img" xlink:href="http://i.onionstatic.com/avclub/6233/63/16x9/1200.jpg"  x="10" y="70" height="240px" width="300px"/> -->
+							<!--         		<img xlink:href="http://i.onionstatic.com/avclub/6233/63/16x9/1200.jpg" class="meme-img" x="10" y="70" height="240" rx="0" ry="0" width="300"/> -->
+						
+							<h1 class="caption" style="font-size: {{size}}px">{{text}}</h1>
 
-<div ngf-drop ng-model="picFile" ngf-pattern="image/*">
-
-        		<img class="meme-img"  x="10" y="70" height="240px" width="300px">
-<!--         		<img xlink:href="http://i.onionstatic.com/avclub/6233/63/16x9/1200.jpg" class="meme-img" x="10" y="70" height="240" rx="0" ry="0" width="300"/> -->
-				<h1 class="caption" style="font-size: {{size}}px">{{text}}</h1>
-				</svg>
-				<h2 class="watermark">{{mark}}</h2>
-			</div>
-		</div>
-<!-- 			<svg width="700" height="350">
-        	<rect x="300" y="20" height="320" rx="0" ry="0" width="320" fill="white" my-text="{{text}}" ng-model="text"/>
-        	<rect x="310" y="90" height="240" rx="0" ry="0" width="300" fill="black" my-text="{{text}}" ng-model="text"/> -->
-    		</svg>
-    		</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="row">
-		<div class="col-md-4 col-md-offset-1">
-			<h4 class="lower-header add-text">4. Watermark Placement</h4>
-			<div class="radio">
-  				<label class="radio-inline">
-    				<input type="radio" name="inlinePositionRadioOptions" id="positionRadios1" value="option1" checked>
-    				Bottom-Left
-  				</label>
-  				<label class="radio-inline">
-    				<input type="radio" name="inlinePositionRadioOptions" id="positionRadios2" value="option2">
-    				Top-Right
-  				</label>
-  				<label class="radio-inline">
-    				<input type="radio" name="inlinePositionRadioOptions" id="positionRadios3" value="option3">
-    				Top-Left
-  				</label>
-  				<label class="radio-inline">
-    				<input type="radio" name="inlinePositionRadioOptions" id="positionRadios4" value="option4">
-    				Bottom-Right
-  				</label>  				
+							<h2 class="wm-bk-bl">{{mark}}</h2>
+						</div>
+						<h4>Resize Image</h4>
+						<input id="ranger" type="range" max="200" min="1" step=".01" value="100">
+						<h4>Move Image</h4>
+						<input id="marginer" type="range" max="200" min="1" step=".01" value="100">
+					</div>
+					</svg>
+					</div>
+				</div>
 			</div>
 		</div>
-</div>
+
+
+		<div class="row">
+			<div class="col-md-4 col-md-offset-1">
+				<h4 class="lower-header add-text">4. Watermark Placement</h4>
+				<div class="radio">
+					<label class="radio-inline">
+						<input type="radio" name="inlinePositionRadioOptions" id="positionRadios1" value="option1" checked>
+						Bottom-Left
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="inlinePositionRadioOptions" id="positionRadios2" value="option2">
+						Bottom-Right
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="inlinePositionRadioOptions" id="positionRadios3" value="option3">
+						Top-Left
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="inlinePositionRadioOptions" id="positionRadios4" value="option4">
+						Top-Right
+					</label>  				
+				</div>
+				<br>
+				<button class="btn generate-button">Generate Your Meme!</button>
+			</div>
+		</div>
 </form>
 
 <script src="../node_modules/angular/angular.js"></script>
@@ -101,10 +110,13 @@
 <script src="./js/controllers/waterMarkCtrl.js"></script>
 <script src="./js/controllers/mainCtrl.js"></script>
 <script src="js/controllers/controller.js"></script>
-<script src="./js/controllers/TestCtrl.js"></script>
 <script src="./js/controllers/imgCtrl.js"></script>
 <script src="js/script.js"></script>
 <script src="../bower_components/angular-canvas-text-fit/angular-canvas-text-fit.js"></script>
 <script src="../node_modules/angular-file-upload/dist/angular-file-upload.min.js"></script>
+<script src="../node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script> 
+<script src="../node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script> 
+<script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+<script src="../node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
 </body>
 </html>
