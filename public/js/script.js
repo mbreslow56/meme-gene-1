@@ -40,13 +40,7 @@ ranger.onchange = function(){
     image.height = height * (ranger.value / 100);
 }
 
-var marginer = document.getElementById('marginer'),
-    pic = document.getElementById('image'),
-    margin = image.margin;
 
-marginer.onchange = function(){
-    pic.style.marginTop = (margin - margin.height) / 2 + "px";
-}
 
 $(document).ready(function(){
 
