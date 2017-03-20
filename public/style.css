@@ -1,7 +1,59 @@
+.navbar {
+      margin-bottom: 0;
+      background-color: #4B0082;
+      z-index: 9999;
+      border: 0;
+
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #4B0082 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+
 body {
-	padding-top: 50px;
-	background-color: #D3D3D3;
+	font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+	background-color: #E6E6FA
 }
+
+.about {
+	text-align: center
+}
+
+.jumbotron {
+		border: solid 1px #9370DB;
+		box-shadow: inset 0px 0px 0px 1px #9400D3, 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+		background-color: #8A2BE2;
+		color: #fff;
+		padding: 50px 25px;
+		font-family: Montserrat, sans-serif;
+		margin-top: 40px
+}
+
+.generate {
+	background-color: #E6E6FA
+}
+
+.container-fluid {
+      padding: 60px 50px;
+}
+
+.bg-grey {
+	background-color: #f6f6f6;
+}
+
 
 .white-square {
     margin: 10px;
@@ -53,15 +105,20 @@ body {
 .upload-button {
     padding: 4px;
     border: 1px solid black;
-    background-color: purple;
+    background-color: #4B0082;
     color: white;
     border-radius: 5px;
     display: block;
     float: left;
 }
 
+.upload-button: hover {
+	color: #f4511e;
+	background-color: #fff;
+}
+
 .generate-button {
-	background-color: purple;
+	background-color: #4B0082;
 	color: white;
 }
 
@@ -83,4 +140,3 @@ img .pic{
 .file-upload {
     display: none;
 }
-
