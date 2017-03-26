@@ -67,5 +67,5 @@ app.use(function(err, req, res, next) {
 
 //start the server
 app.listen('27017', function() {
-  console.log("yo yo yo, on 8000 bro");
+  console.log("yo yo yo, on 27017 bro");
 });

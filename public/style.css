@@ -10,6 +10,9 @@
       border-radius: 0;
       font-family: Montserrat, sans-serif;
   }
+.navbar img {
+      margin: 1px;
+  }
   .navbar li a, .navbar .navbar-brand {
       color: #fff !important;
   }
