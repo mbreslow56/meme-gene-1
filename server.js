@@ -6,7 +6,7 @@ var Meme = require("./models/MemeModel.js");
 
 //let's get going...
 var app = express();
-mongoose.connect('mongodb://localhost/memes');
+mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/memes');
 
 //some middleware that we need
 app.use(bodyParser.json());
@@ -66,6 +66,4 @@ app.use(function(err, req, res, next) {
 });
 
 //start the server
-app.listen('27017', function() {
-  console.log("yo yo yo, on 27017 bro");
-});
+app.listen(process.env.PORT || '8000');
